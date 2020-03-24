@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+body {
+  background: #E5E5E5;
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  background: #fff;
+  width: 350px;
+  border-radius: 8px;
+  padding: 24px;
+  margin: 100px auto 0;
+}
+
+.container .header {
+  padding-bottom: 24px;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.container .body {
+  padding-bottom: 24px;
+}
+
+.container .body .choose {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 24px;
+}
+
+.container .body .choose .item {
+  border: 1px solid #E5E5E5;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  text-align: center;
+  margin: 0 12px;
+  border-radius: 8px;
+  padding: 24px;
+  font-size: 14px;
+  color: #8D8D8D;
+  cursor: pointer;
+}
+
+.container .body .choose .item:hover {
+  border-color: #2685DD;
+}
+
+.container .body .choose .item:first-child {
+  margin-left: 0;
+}
+
+.container .body .choose .item:last-child {
+  margin-right: 0;
+}
+
+.container .body .inputs {
+  display: block;
+}
+
+.container .body .inputs .item {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+  margin-bottom: 24px;
+  line-height: 46px;
+}
+
+.container .body .inputs .item:last-child {
+  margin: 0;
+}
+
+.container .body .inputs .item span {
+  font-size: 14px;
+  color: #8D8D8D;
+}
+
+.container .body .inputs .item input {
+  height: 40px;
+  line-height: 40px;
+  width: calc(50% - 12px);
+  padding: 0 24px;
+  border-radius: 8px;
+  float: right;
+  border: 1px solid #E5E5E5;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  font-size: 22px;
+  outline: none;
+}
+
+.container .body .inputs .item input:hover, .container .body .inputs .item input:focus {
+  border-color: #2685DD;
+}
+
+.container .body .results {
+  border: 1px solid #E5E5E5;
+  padding: 24px;
+  text-align: center;
+  border-radius: 8px;
+  margin-bottom: 24px;
+}
+
+.container .body .results > * {
+  display: block;
+}
+
+.container .body .results span {
+  font-size: 14px;
+  line-height: 16px;
+  margin-bottom: 24px;
+  color: #8D8D8D;
+}
+
+.container .body .results strong {
+  font-size: 52px;
+  line-height: 52px;
+  color: #2685DD;
+  font-weight: normal;
+}
+
+.container .body .infos span {
+  display: block;
+  font-size: 14px;
+  line-height: 26px;
+  color: #8D8D8D;
+}
+
+.container .footer button {
+  width: 100%;
+  display: block;
+  border-radius: 8px;
+  padding: 24px;
+  border: none;
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background: #2685DD;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.hide {
+  display: none !important;
+}
+/*# sourceMappingURL=styles.css.map */

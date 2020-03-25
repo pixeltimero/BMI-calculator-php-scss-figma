@@ -67,6 +67,8 @@ body{
           cursor: pointer;
           i{
             color: unset;
+            display: block;
+            font-size: 40px;
           }
           &:hover{
             border-color: #2685DD;
@@ -171,6 +173,7 @@ body{
         font-weight: 600;
         text-decoration: none;
         text-align: center;
+        cursor: pointer;
       }
     }
   }

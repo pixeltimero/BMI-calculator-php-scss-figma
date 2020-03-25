@@ -4,6 +4,10 @@
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+<?php 
+  if ($_SERVER['REQUEST_METHOD'] !== 'POST'){
+?>
+<form method="POST">
 <div class="container">
   <div class="header">
     BMI Calculator
@@ -13,12 +17,14 @@
       <input type="radio" name="gender" value="male" id="male" checked>
       <label for="male">
         <div class="item">
+          <i class="icon icon-male"></i>
           Male
         </div>
       </label>
       <input type="radio" name="gender" value="female" id="female">
       <label for="female">
         <div class="item">
+          <i class="icon icon-female"></i>
           Woman
         </div>
       </label>
@@ -26,27 +32,39 @@
     <div class="inputs">
       <div class="item">
         <span>Height (in cm)</span>
-        <input type="text" name="height">
+        <input type="number" name="height" required>
       </div>
       <div class="item">
         <span>Weight (in kgs)</span>
-        <input type="text" name="weight">
+        <input type="number" name="weight" required>
       </div>
     </div>
   </div>
   <div class="footer">
-    <button class="hide">Submit</button>
-    <button>Recalculate BMI</button>
+    <button type="Submit">Submit</button>
   </div>
 </div>
-<div class="container hide">
+</form>
+<?php
+}
+?>
+<?php 
+  if ($_SERVER['REQUEST_METHOD'] == 'POST'){
+?>
+<div class="container">
   <div class="header">
     BMI Calculator
   </div>
   <div class="body">
     <div class="results">
       <span>Your BMI is</span>
-      <strong>21.4</strong>
+      <?php 
+      $weight=(int)$_POST['weight'];
+      $height=(int)$_POST['height'];
+      $bmi=$weight/(($height/100)*($height/100));
+      $bmiresult=number_format($bmi, 2, '.', '');
+      ?>
+      <strong><?php echo $bmiresult; ?></strong>
     </div>
     <div class="infos">
       <span></span>
@@ -57,9 +75,11 @@
     </div>
   </div>
   <div class="footer">
-    <button class="hide">Submit</button>
-    <button>Recalculate BMI</button>
+    <a href="index.php">Recalculate BMI</a>
   </div>
 </div>
+<?php
+}
+?>
 </body>
 </html>

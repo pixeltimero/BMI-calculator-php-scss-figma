@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
-
+$color1: #2685DD;
+$color2: #FFFFFF;
+$color3: #E5E5E5;
+$color4: #8D8D8D;
+$border-radius: 8px;
+$spacing: 24px;
 @font-face {
     font-family: 'fontello';
     src: url('font/fontello.eot?12748186');
@@ -33,37 +38,38 @@
   .icon-female:before { content: '\e801'; } /* '' */
   
 body{
-  background: #E5E5E5;
+  background: $color3;
   font-family: 'Roboto', sans-serif;
 }
 
 
 .container{
-    background: #fff;
+    background: $color2;
     width: 350px;
-    border-radius: 8px;
-    padding: 24px;
+    border-radius: $border-radius;
+    padding: $spacing;
     margin: 100px auto 0;
     .header{
-      padding-bottom: 24px;
+      padding-bottom: $spacing;
       font-size: 20px;
       font-weight: 600;
       text-align: center;
     }
     .body{
-      padding-bottom: 24px;
+      padding-bottom: $spacing;
       .choose{
         display: flex;
-        margin-bottom: 24px;
+        margin-bottom: $spacing;
         label{
-          border: 1px solid #E5E5E5;
+          border: 1px solid $color3;
           flex:1 1 auto;
           text-align:center;
           margin: 0 12px;
-          border-radius: 8px;
-          padding: 24px;
+          border-radius: $border-radius;
+          
+          padding: $spacing;
           font-size: 14px;
-          color: #8D8D8D;
+          color: $color4;
           cursor: pointer;
           i{
             color: unset;
@@ -71,7 +77,7 @@ body{
             font-size: 40px;
           }
           &:hover{
-            border-color: #2685DD;
+            border-color: $color1;
           }
           &:first-of-type{
             margin-left: 0;
@@ -86,10 +92,10 @@ body{
           height: 0;
           margin: -12px;
           &:checked + label{
-            border-color: #2685DD;
+            border-color: $color1;
             color: unset;
             i{
-              color: #2685DD;
+              color: $color1;
             }
           }
         }
@@ -99,53 +105,53 @@ body{
         .item{
           align-items: center;
           align-content: space-between;
-          margin-bottom: 24px;
+          margin-bottom: $spacing;
           line-height: 46px;
           &:last-child{
             margin: 0;
           }
           span{
             font-size: 14px;
-            color: #8D8D8D;
+            color: $color4;
           }
           input{
             height: 40px;
             line-height: 40px;
             width: calc(50% - 12px);
-            padding: 0 24px;
-            border-radius: 8px;
+            padding: 0 $spacing;
+            border-radius: $border-radius;
             float: right;
-            border: 1px solid #E5E5E5;
+            border: 1px solid $color3;
             box-shadow: none;
             font-size: 22px;
             outline: none;
             text-align: center;
             &:hover,
             &:focus{
-              border-color: #2685DD;
+              border-color: $color1;
             }
           }
         }
       }
       .results{
-        border: 1px solid #E5E5E5;
-        padding: 24px;
+        border: 1px solid $color3;
+        padding: $spacing;
         text-align: center;
-        border-radius: 8px;
-        margin-bottom: 24px;
+        border-radius: $border-radius;
+        margin-bottom: $spacing;
         & > *{
           display: block;
         }
         span{
           font-size: 14px;
           line-height: 16px;
-          margin-bottom: 24px;
-          color: #8D8D8D;
+          margin-bottom: $spacing;
+          color: $color4;
         }
         strong{
           font-size: 52px;
           line-height: 52px;
-          color: #2685DD;
+          color: $color1;
           font-weight: normal;
         }
       }
@@ -154,7 +160,7 @@ body{
           display: block;
           font-size: 14px;
           line-height: 26px;
-          color: #8D8D8D;
+          color: $color4;
         }
       }
     }
@@ -162,13 +168,13 @@ body{
       button, a{
         display: block;
         width: -webkit-fill-available;
-        border-radius: 8px;
-        padding: 24px;
+        border-radius: $border-radius;
+        padding: $spacing;
         border: none;
         outline: none;
         box-shadow: none;
-        background: #2685DD;
-        color: #fff;
+        background: $color1;
+        color: $color2;
         font-size: 16px;
         font-weight: 600;
         text-decoration: none;
